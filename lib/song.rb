@@ -37,19 +37,20 @@ class Song
     self.artist = artist
     self.genre = genre
   end
-    
+
   def save
     @@all << self
     self
   end
-    
+  
   def artist=(artist) 
     @artist = artist
     artist.add_song(self) if artist
   end
-    
+
   def genre=(genre) 
     @genre = genre
     genre.add_song(self) if genre
   end
-end
+end  
+  
